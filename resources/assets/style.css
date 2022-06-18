@@ -69,10 +69,10 @@ button {
     display: block;
 }
 
-.answer_A,
-.answer_B,
-.answer_C,
-.answer_D {
+.choice_A,
+.choice_B,
+.choice_C,
+.choice_D {
     background-color: aliceblue;
     margin-top: 25px;
     width: 75%;
