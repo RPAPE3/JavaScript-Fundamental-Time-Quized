@@ -10,6 +10,7 @@ var choice_A = document.querySelector(".choice_A");
 var choice_B = document.querySelector(".choice_B");
 var choice_C = document.querySelector(".choice_C");
 var choice_D = document.querySelector(".choice_D");
+var choices = document.querySelector(".question");
 
 
 var question_key = [
@@ -44,6 +45,8 @@ var question_key = [
     }
 ];
 
+var question_screen_2 = [];
+
 start_btn.addEventListener("click", beginQuiz); 
 
 function beginQuiz () {
@@ -59,4 +62,53 @@ function retrieve_question () {
     choice_B.innerHTML = question_screen.optionB;
     choice_C.innerHTML = question_screen.optionC;
     choice_D.innerHTML = question_screen.optionD;
-}
+
+
+    choice_A.addEventListener("click", retrieve_question_2);
+    choice_B.addEventListener("click", retrieve_question_2);
+    choice_C.addEventListener("click", retrieve_question_2);
+    choice_D.addEventListener("click", retrieve_question_2);
+};
+
+
+function retrieve_question_2 () {
+
+        var question_screen = question_key[1];
+        question.innerHTML = question_screen.question;
+        choice_A.innerHTML = question_screen.optionA;
+        choice_B.innerHTML = question_screen.optionB;
+        choice_C.innerHTML = question_screen.optionC;
+        choice_D.innerHTML = question_screen.optionD;
+
+        choice_A.addEventListener("click", retrieve_question_3);
+        choice_B.addEventListener("click", retrieve_question_3);
+        choice_C.addEventListener("click", retrieve_question_3);
+        choice_D.addEventListener("click", retrieve_question_3);
+
+};
+
+
+function retrieve_question_3 () {
+
+    var question_screen = question_key[2];
+        question.innerHTML = question_screen.question;
+        choice_A.innerHTML = question_screen.optionA;
+        choice_B.innerHTML = question_screen.optionB;
+        choice_C.innerHTML = question_screen.optionC;
+        choice_D.innerHTML = question_screen.optionD;
+
+        choice_A.addEventListener("click", retrieve_question_4);
+        choice_B.addEventListener("click", retrieve_question_4);
+        choice_C.addEventListener("click", retrieve_question_4);
+        choice_D.addEventListener("click", retrieve_question_4);
+};
+
+function retrieve_question_4 () {
+
+    var question_screen = question_key[3];
+        question.innerHTML = question_screen.question;
+        choice_A.innerHTML = question_screen.optionA;
+        choice_B.innerHTML = question_screen.optionB;
+        choice_C.innerHTML = question_screen.optionC;
+        choice_D.innerHTML = question_screen.optionD;
+};

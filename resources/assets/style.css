@@ -23,7 +23,6 @@ button {
     letter-spacing: 2px;
     line-height: 1.5;
     padding: 8px 20px;
-    /* text-align: center; */
 }
 
 .card {
@@ -77,6 +76,7 @@ button {
     margin-top: 25px;
     width: 75%;
     margin-left: 11%;
+    cursor: pointer;
 }
 
 .result {
