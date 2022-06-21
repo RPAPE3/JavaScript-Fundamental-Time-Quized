@@ -21,33 +21,36 @@ var question_key = [
         optionA: "no",
         optionB: "no",
         optionC: "no",
-        optionD: "yes",
-        correct: "yes"
+        optionD: "D",
+        correct: "D"
     }, {
         question: "question 2",
         optionA: "no",
         optionB: "no",
-        optionC: "yes",
+        optionC: "C",
         optionD: "no",
-        correct: "yes"
+        correct: "C"
     }, {
         question: "question 3",
         optionA: "no",
-        optionB: "yes",
+        optionB: "B",
         optionC: "no",
         optionD: "no",
         correct: "B"
     }, {
         question: "question 4",
-        optionA: "yes",
+        optionA: "A",
         optionB: "no",
         optionC: "no",
         optionD: "no",
         correct: "A"
+    }, {
+        end: "end"
     }
 ];
 
 var secondsLeft = 100;
+var questionIndex = 0
 
 
 start_btn.addEventListener("click", beginQuiz); 
@@ -73,89 +76,151 @@ function time_minus_10 () {
 
 
 
-function retrieve_question () {
-    var question_screen = question_key[0];
-    question.innerHTML = question_screen.question;
-    choice_A.innerHTML = question_screen.optionA;
-    choice_B.innerHTML = question_screen.optionB;
-    choice_C.innerHTML = question_screen.optionC;
-    choice_D.innerHTML = question_screen.optionD;
+// function retrieve_question () {
+//     var question_screen = question_key[0];
+//     question.innerHTML = question_screen.question;
+//     choice_A.innerHTML = question_screen.optionA;
+//     choice_B.innerHTML = question_screen.optionB;
+//     choice_C.innerHTML = question_screen.optionC;
+//     choice_D.innerHTML = question_screen.optionD;
 
-    choice_D.addEventListener("click", retrieve_question_2);
+//     choice_D.addEventListener("click", retrieve_question_2);
 
-    choice_A.addEventListener("click", time_minus_10);
-    choice_A.addEventListener("click", retrieve_question_2);
-    choice_B.addEventListener("click", time_minus_10);
-    choice_B.addEventListener("click", retrieve_question_2);
-    choice_C.addEventListener("click", time_minus_10);
-    choice_C.addEventListener("click", retrieve_question_2);
+//     choice_A.addEventListener("click", time_minus_10);
+//     choice_A.addEventListener("click", retrieve_question_2);
 
-};
+//     choice_B.addEventListener("click", time_minus_10);
+//     choice_B.addEventListener("click", retrieve_question_2);
 
+//     choice_C.addEventListener("click", time_minus_10);
+//     choice_C.addEventListener("click", retrieve_question_2);
 
+//     // questionIndex++
+// };
 
-function retrieve_question_2 () {
+// function retrieve_question_2 () {
 
-    var question_screen = question_key[1];
-    question.innerHTML = question_screen.question;
-    choice_A.innerHTML = question_screen.optionA;
-    choice_B.innerHTML = question_screen.optionB;
-    choice_C.innerHTML = question_screen.optionC;
-    choice_D.innerHTML = question_screen.optionD;
+//     var question_screen = question_key[1];
+//     question.innerHTML = question_screen.question;
+//     choice_A.innerHTML = question_screen.optionA;
+//     choice_B.innerHTML = question_screen.optionB;
+//     choice_C.innerHTML = question_screen.optionC;
+//     choice_D.innerHTML = question_screen.optionD;
 
-    choice_D.addEventListener("click", retrieve_question_3);
+//     choice_C.removeEventListener("click", time_minus_10);
+//     choice_C.addEventListener("click", retrieve_question_3);
 
-    choice_A.addEventListener("click", time_minus_10);
-    choice_A.addEventListener("click", retrieve_question_3);
-    choice_B.addEventListener("click", time_minus_10);
-    choice_B.addEventListener("click", retrieve_question_3);
-    choice_C.addEventListener("click", time_minus_10);
-    choice_C.addEventListener("click", retrieve_question_3);
+//     choice_A.addEventListener("click", time_minus_10);
+//     choice_A.addEventListener("click", retrieve_question_3);
+//     choice_B.addEventListener("click", time_minus_10);
+//     choice_B.addEventListener("click", retrieve_question_3);
+//     choice_D.addEventListener("click", time_minus_10);
+//     choice_D.addEventListener("click", retrieve_question_3);
+
+//     // choice_A.removeEventListener("click", time_minus_10);
+//     // choice_B.removeEventListener("click", time_minus_10);
+//     // choice_C.removeEventListener("click", time_minus_10);
+//     // choice_D.removeEventListener("click", time_minus_10);
         
-};
+// };
 
 
-function retrieve_question_3 () {
+// function retrieve_question_3 () {
 
-    var question_screen = question_key[2];
-    question.innerHTML = question_screen.question;
-    choice_A.innerHTML = question_screen.optionA;
-    choice_B.innerHTML = question_screen.optionB;
-    choice_C.innerHTML = question_screen.optionC;
-    choice_D.innerHTML = question_screen.optionD;
+//     var question_screen = question_key[2];
+//     question.innerHTML = question_screen.question;
+//     choice_A.innerHTML = question_screen.optionA;
+//     choice_B.innerHTML = question_screen.optionB;
+//     choice_C.innerHTML = question_screen.optionC;
+//     choice_D.innerHTML = question_screen.optionD;
 
-    choice_D.addEventListener("click", retrieve_question_4);
+//     choice_B.addEventListener("click", retrieve_question_4);
+//     choice_B.removeEventListener("click", time_minus_10);
 
-    choice_A.addEventListener("click", time_minus_10);
-    choice_A.addEventListener("click", retrieve_question_4);
-    choice_B.addEventListener("click", time_minus_10);
-    choice_B.addEventListener("click", retrieve_question_4);
-    choice_C.addEventListener("click", time_minus_10);
-    choice_C.addEventListener("click", retrieve_question_4);
+//     choice_A.addEventListener("click", time_minus_10);
+//     choice_A.addEventListener("click", retrieve_question_4);
+//     choice_C.addEventListener("click", time_minus_10);
+//     choice_C.addEventListener("click", retrieve_question_4);
+//     choice_D.addEventListener("click", time_minus_10);
+//     choice_D.addEventListener("click", retrieve_question_4);
 
-};
+//     // choice_A.removeEventListener("click", time_minus_10);
+//     // choice_B.removeEventListener("click", time_minus_10);
+//     // choice_C.removeEventListener("click", time_minus_10);
+//     // choice_D.removeEventListener("click", time_minus_10);
 
-function retrieve_question_4 () {
+// };
 
-    var question_screen = question_key[3];
-        question.innerHTML = question_screen.question;
-        choice_A.innerHTML = question_screen.optionA;
-        choice_B.innerHTML = question_screen.optionB;
-        choice_C.innerHTML = question_screen.optionC;
-        choice_D.innerHTML = question_screen.optionD;
+// function retrieve_question_4 () {
 
-    choice_D.addEventListener("click", scoreScreen);
+//     var question_screen = question_key[3];
+//         question.innerHTML = question_screen.question;
+//         choice_A.innerHTML = question_screen.optionA;
+//         choice_B.innerHTML = question_screen.optionB;
+//         choice_C.innerHTML = question_screen.optionC;
+//         choice_D.innerHTML = question_screen.optionD;
 
-    choice_A.addEventListener("click", time_minus_10);
-    choice_A.addEventListener("click", scoreScreen);
-    choice_B.addEventListener("click", time_minus_10);
-    choice_B.addEventListener("click", scoreScreen);
-    choice_C.addEventListener("click", time_minus_10);
-    choice_C.addEventListener("click", scoreScreen);
-};
+//     choice_A.addEventListener("click", scoreScreen);
+//     choice_A.removeEventListener("click", time_minus_10);
+
+//     choice_B.addEventListener("click", time_minus_10);
+//     choice_B.addEventListener("click", scoreScreen);
+//     choice_C.addEventListener("click", time_minus_10);
+//     choice_C.addEventListener("click", scoreScreen);
+//     choice_D.addEventListener("click", time_minus_10);
+//     choice_D.addEventListener("click", scoreScreen);
+// };
 
 function scoreScreen () {
     q_box.style.display = "none";
     s_box.style.display = "block";
     stop_timer.textContent = secondsLeft;
 }
+
+function retrieve_question () {
+    var question_screen = question_key[questionIndex];
+    question.innerHTML = question_screen.question;
+    choice_A.innerHTML = question_screen.optionA;
+    choice_B.innerHTML = question_screen.optionB;
+    choice_C.innerHTML = question_screen.optionC;
+    choice_D.innerHTML = question_screen.optionD;
+
+}
+
+function next_question () {
+
+    questionIndex++
+
+    var question_screen = question_key[questionIndex];
+    question.innerHTML = question_screen.question;
+    choice_A.innerHTML = question_screen.optionA;
+    choice_B.innerHTML = question_screen.optionB;
+    choice_C.innerHTML = question_screen.optionC;
+    choice_D.innerHTML = question_screen.optionD;
+}
+// var question_screen = question_key[questionIndex];
+// question.innerHTML = question_screen.question;
+// choice_A.innerHTML = question_screen.optionA;
+// choice_B.innerHTML = question_screen.optionB;
+// choice_C.innerHTML = question_screen.optionC;
+// choice_D.innerHTML = question_screen.optionD;
+
+document.addEventListener("click", function (event) {
+    
+    var target = event.target; 
+
+    if (target.matches(".choice")){
+        if (question_key[questionIndex].correct === event.target.textContent) {
+            next_question();
+        } else {
+            next_question();
+            time_minus_10();
+        }
+
+        if (questionIndex === 4) {
+            scoreScreen();
+        }
+    }
+})
+
+
