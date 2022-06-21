@@ -59,9 +59,9 @@ button {
     background-color: aquamarine;
 }
 
-.timmer{
+/* .timmer{
     background-color: blue;
-}
+} */
 .question { 
     background-color: red;
     margin-bottom: 65px;
@@ -81,4 +81,16 @@ button {
 
 .result {
     margin-top: 35px;
+}
+
+.s_box {
+    display: block;
+    background-color: antiquewhite;
+    border: 1px solid slategray;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0;
+    margin: 60px auto;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
 }
